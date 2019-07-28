@@ -1,0 +1,21 @@
+[user]
+	name = vyashole
+	email = adwait@atlan.com
+	signingkey = 6783D046842D9CED
+[gc]
+	autoDetach = false
+[pull]
+	rebase = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[push]
+	default = simple
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	autocrlf = input
