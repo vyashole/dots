@@ -1,6 +1,7 @@
 [user]
 	name = vyashole
-	email = vyashole@gmail.com
+    email = vyashole@gmail.com
+    signingkey = F32C3ED3CE6C536C
 [gc]
 	autoDetach = false
 [pull]
