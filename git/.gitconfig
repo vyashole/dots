@@ -1,7 +1,6 @@
 [user]
 	name = vyashole
-	email = adwait@atlan.com
-	signingkey = 6783D046842D9CED
+	email = vyashole@gmail.com
 [gc]
 	autoDetach = false
 [pull]
