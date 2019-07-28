@@ -94,42 +94,16 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
-. /usr/local/bin/virtualenvwrapper.sh
+. $HOME/.local/bin/virtualenvwrapper.sh 
 
 export WORKON_HOME=$HOME/.virtualenv
 
-export PATH="/usr/local/go/bin:$PATH"
 
-
-
-export PATH="$HOME/.pyenv/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 
 
-export LAN=Gen_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
-
-fpath=(~/.zsh/completions $fpath) 
-. $HOME/.local/bin/aws_zsh_completer.sh
 autoload -Uz compinit && compinit
-
-PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
 . ~/.aliases
 
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/vyashole/.nvm/versions/node/v12.3.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/vyashole/.nvm/versions/node/v12.3.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/vyashole/.nvm/versions/node/v12.3.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/vyashole/.nvm/versions/node/v12.3.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /home/vyashole/.nvm/versions/node/v12.3.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /home/vyashole/.nvm/versions/node/v12.3.0/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
