@@ -1,4 +1,4 @@
-fortune | cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1)
+fortune | cowsay
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="blokkzh"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -86,19 +86,21 @@ plugins=(git virtualenv nvm adb kubectl zsh-syntax-highlighting zsh-completions 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
-. /etc/zsh_command_not_found
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+eval "$(jenv init -)"
+VIRTUALENVWRAPPER_PYTHON=/Users/adwait/.pyenv/shims/python3
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-
-. $HOME/.local/bin/virtualenvwrapper.sh 
-
-export WORKON_HOME=$HOME/.virtualenv
-
-
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:/Users/adwait/opt/anaconda3/bin/
 export PATH="$HOME/.local/bin:$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
@@ -107,3 +109,8 @@ autoload -Uz compinit && compinit
 
 . ~/.aliases
 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

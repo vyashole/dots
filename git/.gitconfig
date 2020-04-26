@@ -1,15 +1,10 @@
 [user]
 	name = vyashole
     email = vyashole@gmail.com
-    signingkey = F32C3ED3CE6C536C
 [gc]
 	autoDetach = false
 [pull]
 	rebase = true
-[commit]
-	gpgsign = true
-[gpg]
-	program = gpg
 [push]
 	default = simple
 [filter "lfs"]
