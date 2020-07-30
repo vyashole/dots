@@ -93,14 +93,14 @@ eval "$(jenv init -)"
 VIRTUALENVWRAPPER_PYTHON=/Users/adwait/.pyenv/shims/python3
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+# source /usr/local/bin/virtualenvwrapper.sh
 
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:/Users/adwait/opt/anaconda3/bin/
+export PATH=$PATH:$HOME/flutter/bin
 export PATH="$HOME/.local/bin:$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
