@@ -47,12 +47,15 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
+# zsh-navigation-tools instantly select from search mode
+znt_list_instant_select=1
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git virtualenv nvm adb kubectl zsh-syntax-highlighting zsh-completions aws docker zsh_reload zsh-navigation-tools github zsh-256color colored-man-pages)
+# add zsh-navigation-tools for better history
+# removed (docker github zsh_reload zsh-navigation-tools) because they make it too slow
+plugins=(git virtualenv nvm adb kubectl zsh-syntax-highlighting zsh-completions aws docker zsh-256color colored-man-pages jenv fzf)
 
 . $ZSH/oh-my-zsh.sh
 
@@ -114,3 +117,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# if fzf is installed, load config 
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
