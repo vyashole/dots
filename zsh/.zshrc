@@ -55,7 +55,7 @@ znt_list_instant_select=1
 # Add wisely, as too many plugins slow down shell startup.
 # add zsh-navigation-tools for better history
 # removed (docker github zsh_reload zsh-navigation-tools) because they make it too slow
-plugins=(git virtualenv nvm adb kubectl zsh-syntax-highlighting zsh-completions aws docker zsh-256color colored-man-pages jenv fzf)
+plugins=(git virtualenv nvm adb kubectl zsh-syntax-highlighting zsh-completions aws docker zsh-256color colored-man-pages jenv fzf zsh-autosuggestions command-not-found)
 
 . $ZSH/oh-my-zsh.sh
 
@@ -117,6 +117,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f ~/.secret ]] || source ~/.secret
 
 # if fzf is installed, load config 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
