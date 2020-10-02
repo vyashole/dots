@@ -105,6 +105,8 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$HOME/flutter/bin
 export PATH="$HOME/.local/bin:$HOME/.pyenv/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 eval "$(pyenv init -)"
 
 
@@ -113,7 +115,6 @@ autoload -Uz compinit && compinit
 . ~/.aliases
 
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
