@@ -122,3 +122,5 @@ autoload -Uz compinit && compinit
 
 # if fzf is installed, load config 
 # [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export PATH="/usr/local/opt/ruby@2.7/bin:$PATH"

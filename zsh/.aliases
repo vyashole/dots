@@ -17,3 +17,7 @@ alias 'bfg=java -jar ~/.local/bin/bfg.jar'
 alias 'utcnow=date +%Y-%m-%dT%H:%M:%SZ -u'
 # alias 'pbcopy=xclip -selection c'
 # alias 'code=codium'
+alias 'yarn-whatever=yarn && yarn jetify && yarn pod-install && cd ios && bundle install && cd ../android && bundle install && cd ..'
+alias "generate-staging=cp .env.staging .env && yarn generate-api -b 'https://api.staging.jupiter.money'"
+alias "generate-dev=cp .env.dev .env && yarn generate-api -b 'https://api.dev.jupiter.money'"
+alias "generate-prod=cp .env.prod .env && yarn generate-api -b 'https://api.jupiter.money'"
