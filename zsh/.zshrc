@@ -109,6 +109,7 @@ export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 eval "$(pyenv init -)"
 
+export __MAC_CLI_IGNORE_APPS='grep\|iTerm\|Finder\|Dropbox\|Bartender\|Hidden\|CopyQ\|Dropover\|Krisp\|Rectangle\|JustJoin\|WireGuard\|KeepassXC\|Soduto\|iGlance'
 
 autoload -Uz compinit && compinit
 
